@@ -1,29 +1,16 @@
 {% extends "base.html" %} {% block content%}
 <div class="row">
   <div class="col">
-    <div
-      class="card text"
-      style="
-        padding: 10px;
-        max-width: 28rem;
-        height: 20rem;
-        color: #275950;
-        background-color: #41bfb3;
-      "
-    >
+    <div class="card">
       <div class="card-text">
         <div class="card-header">Members</div>
-        <a
-          href="{% url 'memberCreate' %}"
-          style="color: #275950; margin-left: 4%"
-          >Create new member</a
+        <strong>
+          <a href="{% url 'memberCreate' %}">Create new member</a></strong
         >
         <ul>
           {% for member in members %}
           <li>
-            <a href="{% url 'memberDetail' member.id %}" style="color: #275950">
-              {{ member.name }}
-            </a>
+            <a href="{% url 'memberDetail' member.id %}"> {{ member.name }} </a>
           </li>
           {% endfor %}
         </ul>
@@ -72,27 +59,14 @@
     </div>
   </div>
   <div class="col">
-    <div
-      class="card text"
-      style="
-        padding: 10px;
-        max-width: 28rem;
-        height: 20rem;
-        background-color: #41bfb3;
-        color: #275950;
-      "
-    >
+    <div class="card">
       <div class="card-text">
         <div class="card-header">Teams</div>
-        <a href="{% url 'teamCreate' %}" style="color: #275950; margin-left: 4%"
-          >Create new team</a
-        >
+        <strong><a href="{% url 'teamCreate' %}">Create new team</a> </strong>
         <ul>
           {% for team in teams %}
           <li>
-            <a href="{% url 'teamDetail' team.id %}" style="color: #275950">
-              {{ team.name }}
-            </a>
+            <a href="{% url 'teamDetail' team.id %}"> {{ team.name }} </a>
           </li>
           {% endfor %}
         </ul>
@@ -139,25 +113,12 @@
     </div>
   </div>
   <div class="col">
-    <div
-      class="card text"
-      style="
-        padding: 10px;
-        max-width: 28rem;
-        height: 20rem;
-        background-color: #41bfb3;
-        color: #275950;
-      "
-    >
+    <div class="card">
       <div class="card-text">
         <div class="card-header">Locations</div>
-        <p>
-          <a
-            href="{% url 'locations' %}"
-            style="color: #275950; margin-left: 4%"
-            >Views locations</a
-          >
-        </p>
+        <strong>
+          <a href="{% url 'locations' %}">Views locations</a>
+        </strong>
       </div>
     </div>
   </div>

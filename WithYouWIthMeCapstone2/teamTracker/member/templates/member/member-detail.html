@@ -1,8 +1,6 @@
 {% extends "base.html" %} {% block content%}
 <div
-  class="card text"
-  style="padding: 10px; max-width: 28rem; height: 20rem; background-color: #41bfb3; color: #275950"
->
+  class="card">
 <div class="card-text">
   <div class="card-header">Member {{member.name}} detail page</h2></div>
     <ul>
@@ -25,8 +23,8 @@
         Member Team: {{member.team}} 
       </li>
     </ul>
-      <a href="{% url 'memberUpdate' member.id %}"><button class="btn btn-light">Update</button></a>
-      <a href="{% url 'memberDelete' member.id %}">><button class="btn btn-light">Delete</button></a>
+      <a href="{% url 'memberUpdate' member.id %}"><button class="btn btn-success">Update</button></a>
+      <a href="{% url 'memberDelete' member.id %}"><button class="btn btn-success">Delete</button></a>
   </div>
 </div>
 {% endblock %}

@@ -1,6 +1,5 @@
 from datetime import date
 from django.db import models
-# from location.models import Location
 from team.models import Team, Location
 
 

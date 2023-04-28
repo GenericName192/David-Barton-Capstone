@@ -15,7 +15,8 @@ from django.views.decorators.cache import cache_page
 
 #pagination
 from django.core.paginator import Paginator
-# Create your views here.
+
+
 TeamForm = modelform_factory(Team, exclude=[])
 
 @cache_page(1) # Wanted to see if it would work but annoying during developement, reminder to change later.

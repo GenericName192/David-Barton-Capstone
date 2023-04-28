@@ -13,27 +13,15 @@
     />
     <link rel="stylesheet" href="/static/home/style.css">
   </head>
-  <body style="background-color: #91f2e9;">
-    <div class="container">
-      <div class="col offset-2">
-        <nav class="nav nav-pills" style="margin-bottom: 20px;">
-          <li class="nav-item"></li>
-            <a class="nav-link active" href="{% url 'home' %}" style="margin-left: 20px; text-align: center; background-color: #2a8c82; color: #260101;">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="{% url 'locations' %}" style="margin-left: 20px; text-align: center; background-color: #2a8c82; color: #260101;">View locations</a>
-          </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="{% url 'teamCreate' %}" style="margin-left: 20px; text-align: center; background-color: #2a8c82; color: #260101;">Create new team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="{% url 'memberCreate' %}" style="margin-left: 20px; text-align: center; background-color: #2a8c82; color: #260101;">Create new member</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/admin" style="margin-left: 20px; text-align: center; background-color: #2a8c82; color: #260101;">Admin</a></li>
-            </li>
+  <body style="background-color: lightgray">
+    <div class="container-fluid">
+        <nav class="navbar">
+            <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+            <a class="navbar-brand" href="{% url 'locations' %}" >View locations</a>
+            <a class="navbar-brand" href="{% url 'teamCreate' %}" >Create new team</a>
+            <a class="navbar-brand" href="{% url 'memberCreate' %}">Create new member</a>
+            <a class="navbar-brand" href="/admin">Admin</a></li>
           </nav>
-        </div>
       </div>
     {% block content%} {% endblock %}
     <script
