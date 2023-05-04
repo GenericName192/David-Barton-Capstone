@@ -6,16 +6,12 @@ from .models import Member
 
 # forms
 from django.forms import modelform_factory
-# from .forms import MemberFrom
 
 # caching stuff
 from django.views.decorators.cache import cache_page
 
-#pagination
-from django.core.paginator import Paginator
 
-
-# Memebers
+# Members
 MemberForm = modelform_factory(Member, exclude=["role"]) # role is excluded as
 # it is set using default.
 
